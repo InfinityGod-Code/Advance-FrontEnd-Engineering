@@ -38,7 +38,6 @@ const countSlice = createSlice({
     },
   ],
   reducers: {
-    
     increment: (state, action) => {
       const counter = state.find((c) => c.label === action.payload);
       if (counter) {
