@@ -13,7 +13,7 @@ function Counter() {
         <div style={s.header}>
           <div style={s.headerLeft}>
             <div style={s.logo}>◈</div>
-            <div>
+            <div style ={s.headerLeftRight}>
               <h1 style={s.title}>Counter Dashboard</h1>
               <p style={s.subtitle}>Manage your counts with precision — beautiful, minimal & fast</p>
             </div>
@@ -52,10 +52,6 @@ function Counter() {
                   <span style={s.btnIconInc}>+</span> Increment
                 </button>
               </div>
-
-              <button type="button" style={s.btnRedo} aria-label="Redo">
-                <span style={s.redoIcon}>↻</span> Redo
-              </button>
             </div>
           ))}
         </div>
@@ -77,7 +73,7 @@ const s = {
   },
   shell: {
     width: "100%",
-    maxWidth: 1080,
+    
   },
   header: {
     background: "#ffffff",
@@ -93,6 +89,7 @@ const s = {
     marginBottom: 22,
   },
   headerLeft: { display: "flex", alignItems: "center", gap: 14 },
+  headerLeftRight: { display: "flex", alignItems: "start", flexDirection: "column"},
   logo: {
     width: 44,
     height: 44,
@@ -200,22 +197,7 @@ const s = {
   },
   btnIcon: { fontSize: 16, fontWeight: 700, lineHeight: 1 },
   btnIconInc: { width: 18, height: 18, borderRadius: 999, background: "rgba(255,255,255,0.22)", display: "grid", placeItems: "center", fontSize: 13 },
-  btnRedo: {
-    height: 40,
-    borderRadius: 12,
-    border: "1px dashed #cbd5e1",
-    background: "#f8fafc",
-    color: "#475569",
-    fontFamily: "Inter,sans-serif",
-    fontSize: 13,
-    fontWeight: 700,
-    cursor: "pointer",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    gap: 7,
-  },
-  redoIcon: { fontSize: 14 },
+
 }
 
 export default Counter
