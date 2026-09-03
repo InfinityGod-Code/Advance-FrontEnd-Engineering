@@ -6,29 +6,6 @@ function DashBoard() {
 const state = useSelector((state) => state.dashboard);
 
 
-  const columns = [
-    {
-      title: "TODO",
-      content: [
-        {
-          name: "Task 1",
-          tag: "High Priority",
-        },
-      ],
-      id: 1,
-    },
-    {
-      title: "PROGRESS",
-      content: [],
-      id: 2,
-    },
-    {
-      title: "DONE",
-      content: [],
-      id: 3,
-    },
-  ];
-
   const styles = {
     main: {
       display: "flex", // creates a flex row so columns sit side-by-side

@@ -1,6 +1,14 @@
-import { Dialog,Portal } from "@chakra-ui/react";
+import { Button, Dialog,Portal } from "@chakra-ui/react";
+import {useDispatch} from "react-redux";
+import {addTask} from "../dashboard/state/reducer";
 
 function Header() {
+
+  const dispatch = useDispatch();
+
+  let count = 0;
+  
+
   const styles = {
     header: {
       display: "flex", // flex row so button can be aligned left/right via justifyContent
@@ -51,8 +59,17 @@ function Header() {
 
               <Dialog.Body>
                 Content of the dialog
+                <Button onClick={() => {dispatch(addTask({
+                  data : {
+                    title: "TODO",
+                    columnId: 2,
+                    task : {
+                      name: `Task ${count + 1}`,
+                      tag: "Low Priority",
+                    }
+                  }
+                }))}}>Submit</Button>
               </Dialog.Body>
-
             </Dialog.Content>
           </Dialog.Positioner>
         </Portal>

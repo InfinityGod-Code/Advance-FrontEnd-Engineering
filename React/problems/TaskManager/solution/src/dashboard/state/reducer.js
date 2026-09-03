@@ -33,7 +33,8 @@ const headerSlice = createSlice({
     initialState,
     reducers: {
         addTask(state, action) {
-            const { columnId, task } = action.payload;
+          console.log("addTask action payload:", action.payload);
+            const { columnId, task } = action.payload.data;
             const column = state.find((col) => col.id === columnId);
             if (column) {
                 column.content.push(task);
