@@ -5,8 +5,6 @@ import {addTask} from "../dashboard/state/reducer";
 function Header() {
 
   const dispatch = useDispatch();
-
-  let count = 0;
   
 
   const styles = {
@@ -62,9 +60,9 @@ function Header() {
                 <Button onClick={() => {dispatch(addTask({
                   data : {
                     title: "TODO",
-                    columnId: 2,
+                    columnId: 3,
                     task : {
-                      name: `Task ${count + 1}`,
+                      name: `Task ${Math.floor(Math.random() * 100)}`,
                       tag: "Low Priority",
                     }
                   }
